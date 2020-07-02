@@ -3,11 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui'   
-import 'element-ui/lib/theme-chalk/index.css' 
-// import axios from './api/axios'
-// Vue.use(axios)
-Vue.use(ElementUI ) 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import axios from 'axios'
+axios.prototype.$http = axios;
+axios.defaults.baseURL = "http://localhost:8019/api/"
+Vue.use(ElementUI )
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

@@ -6,6 +6,7 @@ import bill from '@/view/order/bill.vue'
 import addmaterial from '@/view/sto/addmaterial.vue'
 import upmaterial from '@/view/sto/upmaterial.vue'
 import goods from '@/view/order/goods.vue'
+import updataOrder from "../view/order/updataOrder";
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -14,11 +15,16 @@ export default new Router({
       name: 'index',
       component: index
     },
-    
+
     {
       path: '/material',
       name: 'material',
       component: material
+    },
+    {
+      path: '/updataOrder',
+      name: 'updataOrder',
+      component: updataOrder
     },
     {
       path: '/bill',
